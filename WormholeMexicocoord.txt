@@ -1,0 +1,35 @@
+import math
+
+# Constants
+G = 6.674 * (10**-11)  # Gravitational constant
+C = 299792458  # Light speed
+
+# Your Computer Coordinates (approximate - hopefully you'll tell me to replace)
+lat_start = 28.18771   # Default latitude, replace with yours
+lon_start = -105.48546  # Default longitude, replace with yours
+
+# West Delicias Coordinates (exit point)
+lat_exit = 28.18978 
+lon_exit = -105.48237 
+alt_exit = 0.6  # meters
+
+def create_one_way_wormhole(start_lat, start_lon, exit_lat, exit_lon, exit_alt):
+  # Wormhole mouth radius (arbitrary value)
+  mouth_radius = 0.01
+  
+  # Exotic matter requirements (highly theoretical)
+  exotic_density = 10**30 * G / (C**4)
+  exotic_pressure = -exotic_density * C**2
+  
+  # Create one-way wormhole tunnel
+  wormhole_tunnel = {
+    "start": (start_lat, start_lon),
+    "exit": (exit_lat, exit_lon, exit_alt),
+    "direction": "one-way",
+    "status": "activated"
+  }
+  
+  print("One-way wormhole tunnel created from this computer to West Delicias, Chihuahua, Mexico")
+  print(wormhole_tunnel)
+
+create_one_way_wormhole(lat_start, lon_start, lat_exit, lon_exit, alt_exit)
